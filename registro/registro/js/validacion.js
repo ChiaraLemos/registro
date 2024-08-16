@@ -6,27 +6,11 @@ function showAlertSuccess() {
 function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
-
-document.addEventListener(`DOMContentLoaded`, function() {
-
-
- const camposTexto = document.getElementsByClassName("form-control"); 
-
-	for (i=0; i < camposTexto.length; i++) {
-		if (camposTexto.value == ) {
-            return " está vacio y es OBLIGATORIO"
-			 } else {
-
-             }
-            
-			
-        }
-}
-)};
+		
 
 document.addEventListener('DOMContentLoaded', () => {
     const regBtn = document.getElementById('regBtn');
-    
+     
     regBtn.addEventListener('click', () => {
         const nombre = document.getElementById('nombre').value;
         const apellido = document.getElementById('apellido').value;
@@ -34,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password1 = document.getElementById('password1').value;
         const password2 = document.getElementById('password2').value;
         
-        const terminos = document.getElementById('terminos').checked;
+        const terminos = document.getElementById('form-check-label').checked;
         
          // Validaciones
          if (!nombre || !apellido || !email || !password1 || !password2) {
@@ -52,9 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        if (!terminos) {
-            showAlertError('Debe aceptar los términos y condiciones.');
-            return;
+        if (!terminos && !nombre || !apellido || !email || !password1 || !password2 ) {
+           return showAlertError('Debe aceptar los términos y condiciones.');
+        } else {
+            return showAlertSuccess(`Datos guardados correctamente`);
         }
         
         // Si todas las validaciones pasan
