@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         const terminos = document.getElementById('form-check-label').checked;
         
-         // Validaciones
+         
          if (!nombre || !apellido || !email || !password1 || !password2) {
             showAlertError('Todos los campos deben estar completos.');
             return;
