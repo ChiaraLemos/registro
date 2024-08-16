@@ -8,7 +8,7 @@ function showAlertError() {
 }
 		
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const regBtn = document.getElementById('regBtn');
      
     regBtn.addEventListener('click', () => {
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return showAlertSuccess(`Datos guardados correctamente`);
         }
         
-        // Si todas las validaciones pasan
-        showAlertSuccess('Datos guardados correctamente');
+       
     });
 });
