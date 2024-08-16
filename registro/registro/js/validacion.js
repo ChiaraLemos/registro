@@ -1,12 +1,3 @@
-function showAlertSuccess() {
-    document.getElementById("alert-success").classList.add("show");
-    
-}
-
-function showAlertError() {
-    document.getElementById("alert-danger").classList.add("show");
-}
-		
 
 document.addEventListener('DOMContentLoaded', function () {
     const regBtn = document.getElementByClass('bg-light');
@@ -42,6 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return showAlertSuccess(`Datos guardados correctamente`);
         }
         
-       
+       function showAlertSuccess() {
+    document.getElementById("alert-success").classList.add("show");
+    
+}
+
+function showAlertError() {
+    document.getElementById("alert-danger").classList.add("show");
+}
     });
 });
+
+
