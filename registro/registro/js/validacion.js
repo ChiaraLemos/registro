@@ -9,7 +9,7 @@ function showAlertError() {
 		
 
 document.addEventListener('DOMContentLoaded', function () {
-    const regBtn = document.getElementById('regBtn');
+    const regBtn = document.getElementByClass('bg-light');
      
     regBtn.addEventListener('click', () => {
         const nombre = document.getElementById('nombre').value;
